@@ -1,8 +1,5 @@
 ﻿using BookStore.Data;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace BookStore.Repositories.Interfaces
 {
@@ -10,5 +7,9 @@ namespace BookStore.Repositories.Interfaces
     {
         List<Book> GetAll();
         Book GetById(int id);
+        List<Book> GetByAuthor(string author);
+        void Create(Book book);
+        void Delete(Book book);
+        void Update(Book dbBook);
     }
 }

@@ -1,9 +1,6 @@
 ﻿using BookStore.Data;
 using BookStore.ModelDtos;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+
 
 namespace BookStore.Helpers
 {
@@ -12,6 +9,20 @@ namespace BookStore.Helpers
         public static BookDto ToBookDto(this Book book)
         {
             return new BookDto
+            {
+                Id = book.Id,
+                Title = book.Title,
+                Description = book.Description,
+                Author = book.Author,
+                Genre = book.Genre,
+                Quantity = book.Quantity,
+                Price = book.Price
+            };
+        }
+
+        public static Book ToBookEntity(this BookDto book)
+        {
+            return new Book
             {
                 Id = book.Id,
                 Title = book.Title,

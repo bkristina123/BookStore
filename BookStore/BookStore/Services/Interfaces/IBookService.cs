@@ -1,9 +1,5 @@
-﻿using BookStore.Data;
-using BookStore.ModelDtos;
-using System;
+﻿using BookStore.ModelDtos;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace BookStore.Services.Interfaces
 {
@@ -11,5 +7,9 @@ namespace BookStore.Services.Interfaces
     {
         List<BookDto> GetAll();
         BookDto GetById(int id);
+        List<BookDto> GetByAuthor(string author);
+        void Create(BookDto book);
+        void Delete(int id);
+        void Update(BookDto book);
     }
 }
