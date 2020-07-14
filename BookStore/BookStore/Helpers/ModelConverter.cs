@@ -16,7 +16,9 @@ namespace BookStore.Helpers
                 Author = book.Author,
                 Genre = book.Genre,
                 Quantity = book.Quantity,
-                Price = book.Price
+                Price = book.Price,
+                ImgUrl = book.ImgUrl
+
             };
         }
 
@@ -30,7 +32,9 @@ namespace BookStore.Helpers
                 Author = book.Author,
                 Genre = book.Genre,
                 Quantity = book.Quantity,
-                Price = book.Price
+                Price = book.Price,
+                ImgUrl = book.ImgUrl
+                
             };
         }
     }
