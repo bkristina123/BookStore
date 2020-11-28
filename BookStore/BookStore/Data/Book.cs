@@ -24,5 +24,7 @@ namespace BookStore.Data
         [Required]
         public string ImgUrl { get; set; }
 
+        public List<BookOrders> BookOrders { get; set; }
+
     }
 }

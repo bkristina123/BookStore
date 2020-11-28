@@ -41,10 +41,17 @@ namespace BookStore.Repositories
             return contex.Books.FirstOrDefault(x => x.Id == id);
         }
 
+        public List<Book> GetByIds(List<int> BookIds)
+        {
+            return contex.Books.Where(x => BookIds.Contains(x.Id)).ToList();
+        }
+
         public void Update(Book dbBook)
         {
             contex.Books.Update(dbBook);
             contex.SaveChanges();
         }
+
+
     }
 }
